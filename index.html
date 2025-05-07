@@ -425,7 +425,7 @@ scene.add(backLight);
             -5 * aspect, 5 * aspect, 5, -5, 0.1, 1000
         );
         camera.position.set(0, 1.5, 5);
-        camera.zoom = 10;
+        camera.zoom = 6;
         camera.updateProjectionMatrix();
 
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -741,7 +741,7 @@ new THREE.TextureLoader().load('diseño_base.jpg',
                 controls.target.lerpVectors(startTarget, center, easedProgress);
                 
                 controls.update();
-                camera.zoom = THREE.MathUtils.lerp(startZoom, 10, easedProgress);
+                camera.zoom = THREE.MathUtils.lerp(startZoom, 6, easedProgress);
                 camera.updateProjectionMatrix();
                 
                 if (progress < 1) {
